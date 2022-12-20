@@ -2,13 +2,18 @@ import React from 'react';
 import Add from '../images/add_images.png';
 
 const Register = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return(
         <div className='formContainer'>
             <div className='formWrapper'>
                 <span className='logo'>GART TUBE</span>
                 <span className='title'>Ingresa a Gart Tube</span>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='display name' />
                     <input type="email" placeholder='email'/>
                     <input type="password" placeholder='password'/>
